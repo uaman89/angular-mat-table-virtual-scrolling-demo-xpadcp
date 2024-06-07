@@ -1,0 +1,15 @@
+<header>
+	<mat-toolbar color="primary">
+    Angular Mat-Table Virtual Scrolling Demo
+  </mat-toolbar>
+</header>
+<main>
+  <mat-card>
+    <mat-card-title>People</mat-card-title>
+    <mat-card-content>
+      <people-viewport [people]="people"
+                      (personSelected)="doSomething($event)">
+      </people-viewport>
+    </mat-card-content>
+  </mat-card>
+</main>
