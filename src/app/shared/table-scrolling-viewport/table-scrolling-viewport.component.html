@@ -1,4 +1,5 @@
-<cdk-virtual-scroll-viewport [itemSize]="itemSize">
+offset {{ offset }}
+<cdk-virtual-scroll-viewport [itemSize]="itemSize" [minBufferPx]="200" [maxBufferPx]="300">
   <ng-container *cdkVirtualFor="let item of virtualItems"></ng-container>
   <ng-content></ng-content>
 </cdk-virtual-scroll-viewport>

@@ -10,3 +10,8 @@ table {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+tr.mat-header-row {
+  position: sticky;
+  top: var(--offset, 0);
+}
