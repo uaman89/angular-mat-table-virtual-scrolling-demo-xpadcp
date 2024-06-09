@@ -1,6 +1,6 @@
 <table mat-table [dataSource]="dataSource">
 
-  <ng-container matColumnDef="id">
+  <ng-container matColumnDef="id" [sticky]="true">
     <th mat-header-cell *matHeaderCellDef>ID</th>
     <td mat-cell *matCellDef="let p"> {{p.id}} </td>
   </ng-container>
@@ -20,7 +20,7 @@
     <td mat-cell *matCellDef="let p"> {{p.email}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="phone">
+  <ng-container matColumnDef="phone" [stickyEnd]="true">
     <th mat-header-cell *matHeaderCellDef>Phone</th>
     <td mat-cell *matCellDef="let p"> {{p.phone}} </td>
   </ng-container>

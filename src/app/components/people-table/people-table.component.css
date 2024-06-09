@@ -14,4 +14,9 @@ table {
 tr.mat-header-row {
   position: sticky;
   top: var(--offset, 0);
+
+  background: aliceblue;
+
+
+  z-index: 2; /* fix stick columns*/
 }
