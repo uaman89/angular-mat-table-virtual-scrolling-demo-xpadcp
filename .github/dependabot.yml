@@ -1,24 +1,16 @@
 version: 2
-
-# 1. Grouped Security Updates (directory: "/")
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    schedule:
-      interval: "weekly"
-    groups:
-      security-updates:
-        applies-to: security-updates
-        patterns:
-          - "*"
-
-# 2. Version updates ONLY for specific packages (directory: "./")
-  - package-ecosystem: "npm"
-    directory: "./"
     schedule:
       interval: "weekly"
     allow:
       - dependency-name: "your-package-1"
       - dependency-name: "your-package-2"
     ignore:
-      - dependency-name: "*"
+      - dependency-name: "*"  # blocks all others EXCEPT those above
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"  # groups all security updates in one PR
