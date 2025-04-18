@@ -5,9 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    allow:
-      - dependency-name: "rxjs"
-      - dependency-name: "tslib"
+    open-pull-requests-limit: 0  # Prevents version update PRs
     groups:
       security-updates:
         applies-to: security-updates
