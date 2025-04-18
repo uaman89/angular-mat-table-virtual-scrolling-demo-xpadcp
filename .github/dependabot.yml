@@ -5,8 +5,8 @@ updates:
     schedule:
       interval: "weekly"
     allow:
-      - dependency-name: "your-package-1"
-      - dependency-name: "your-package-2"
+      - dependency-name: "rxjs"
+      - dependency-name: "tslib"
     ignore:
       - dependency-name: "*"  # blocks all others EXCEPT those above
     groups:
