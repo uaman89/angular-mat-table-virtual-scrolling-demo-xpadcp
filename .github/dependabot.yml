@@ -1,7 +1,7 @@
 version: 2
 
+# 1. Grouped Security Updates (directory: "/")
 updates:
-  # 1. Security updates for everything (grouped)
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -10,15 +10,15 @@ updates:
       security-updates:
         applies-to: security-updates
         patterns:
-          - "*" # group all security updates
+          - "*"
 
-  # 2. Version updates ONLY for 2 specific packages
+# 2. Version updates ONLY for specific packages (directory: "./")
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "./"
     schedule:
       interval: "weekly"
     allow:
-      - dependency-name: "rxjs"
-      - dependency-name: "tslib"
+      - dependency-name: "your-package-1"
+      - dependency-name: "your-package-2"
     ignore:
-      - dependency-name: "*" # ignore everything else
+      - dependency-name: "*"
