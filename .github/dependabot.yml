@@ -1,4 +1,5 @@
 version: 2
+
 updates:
   - package-ecosystem: "npm"
     directory: "/"
@@ -7,10 +8,8 @@ updates:
     allow:
       - dependency-name: "rxjs"
       - dependency-name: "tslib"
-    ignore:
-      - dependency-name: "*"  # blocks all others EXCEPT those above
     groups:
       security-updates:
         applies-to: security-updates
         patterns:
-          - "*"  # groups all security updates in one PR
+          - "*"
